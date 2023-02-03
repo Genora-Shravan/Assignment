@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#600853"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="51dp"
+            android:background="#600853"
+            android:fontFamily="sans-serif-medium"
+            android:text="1stZoom"
+            android:gravity="center"
+            android:layout_marginStart="174dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="normal"/>
+
+        <ImageView
+            android:id="@+id/add1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="135dp"
+            android:src="@drawable/plus"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/fav_repo_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_marginTop="228dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Track your favourite repository"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Add_repo1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Add Now"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fav_repo_txt"
+        app:layout_constraintVertical_bias="0.002" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="477dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
